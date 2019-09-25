@@ -9,9 +9,9 @@ services:
       - "./data/mongo:/data"
   ohmyform:
     image: ohmyform/ohmyform
-    #build: .
-    #volumes:
-    #  - ".:/opt/app"
+    # build: .
+    volumes:
+     - "./public/modules/:/opt/app/public/modules/"
     environment:
       CREATE_ADMIN: "TRUE"
       SOCKET_URL: 'localhost:5000'
